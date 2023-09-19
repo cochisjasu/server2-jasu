@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Archivo"
+  },
+  {
+    "id": 2,
+    "name": "Imagen"
+  },
+  {
+    "id": 3,
+    "name": "Documento"
+  },
+  {
+    "id": 4,
+    "name": "Video"
+  },
+  {
+    "id": 5,
+    "name": "Audio"
+  }
+]

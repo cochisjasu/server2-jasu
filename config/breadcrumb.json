@@ -1,0 +1,6 @@
+{
+  "snappingThreshold": 5,
+  "apiHost": "roads.googleapis.com",
+  "apiRoot": "/v1/snapToRoads",
+  "apiKey": "AIzaSyA0RTBwLAG_KmCc1Juja15nIsiR3xz_HEw"
+}

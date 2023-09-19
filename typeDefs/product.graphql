@@ -1,0 +1,263 @@
+type FruitCategory {
+    id: ID!
+    name: String!
+}
+
+type Fruit {
+    id: ID!
+    name: String!
+    category: FruitCategory!
+    picture: String
+    description: String
+}
+
+type FruitVariety {
+    id: ID!
+    name: String!
+    fullName: String!
+    picture: String
+    description: String
+    fruit: Fruit!
+}
+
+type PresentationCategory {
+    id: ID!
+    name: String!
+}
+
+type Presentation {
+    id: ID!
+    name: String!
+    picture: String!
+    description: String!
+    category: PresentationCategory!
+}
+
+type ProductFile {
+    id: ID!
+    name: String!
+    url: String!
+    productId: ID!
+}
+
+type Product {
+    id: ID!
+    fruitVariety: FruitVariety!
+    presentation: Presentation!
+    description: String!
+    picture: String!
+    shelfLife: String!
+    productFiles: [ProductFile!]!
+}
+
+type SyncResult {
+    added: Int!
+    updated: Int!
+    deleted: Int!
+}
+
+input CreateFruitCategory {
+    id: ID!
+    nameEs: String!
+    nameEn: String!
+}
+
+type FruitEdge {
+    node: Fruit!
+}
+
+type FruitConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [FruitEdge]!
+}
+
+input CreateFruit {
+    id: ID
+    nameEs: String!
+    nameEn: String!
+    category: ID!
+}
+
+type FruitVarietyEdge {
+    node: FruitVariety!
+}
+
+type FruitVarietyConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [FruitVarietyEdge]!
+}
+
+input CreateFruitVariety {
+    id: ID
+    nameEs: String!
+    nameEn: String!
+    image: String
+    fruit: ID!
+}
+
+input CreatePresentationCategory {
+    id: ID!
+    nameEs: String!
+    nameEn: String!
+}
+
+type PresentationEdge {
+    node: Presentation!
+}
+
+type PresentationConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [PresentationEdge]!
+}
+
+input CreatePresentation {
+    id: ID
+    nameEs: String!
+    nameEn: String!
+    image: String!
+    category: ID!
+    descriptionEs: String!
+    descriptionEn: String!
+}
+
+type ProductFileEdge {
+    node: ProductFile!
+}
+
+type ProductFileConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [ProductFileEdge]!
+}
+
+input CreateProductFile {
+    id: ID
+    name: String!
+    url: String!
+    product: ID!
+}
+
+type ProductEdge {
+    node: Product!
+}
+
+type ProductConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [ProductEdge]!
+}
+
+input CreateProduct {
+    id: ID
+    fruitVariety: ID!
+    presentation: ID!
+    description: String!
+}
+
+input FruitPresentationFilter {
+    query: String
+    category: [ID]
+}
+
+input FruitVarietyFilter {
+    query: String
+    fruit: [ID]
+    category: [ID]
+    onlyWithImages: Boolean
+}
+
+input ProductFilter {
+    query: String
+    search: String
+    fruitVariety: [String]
+    presentation: [String]
+    id: [ID]
+}
+
+input ProductInput {
+    id: ID
+    fruitVariety: ID
+    presentation: ID
+}
+
+input ProductFileFilter {
+    name: String
+    product: [ID]
+    id: [ID]
+}
+
+extend type Query {
+    fruitCategories: [FruitCategory!]!
+    fruitCategory(id: ID!): FruitCategory
+    fruits(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: FruitPresentationFilter
+    ): FruitConnection
+    fruit(id: ID!): Fruit
+    fruitVarieties(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: FruitVarietyFilter
+    ): FruitVarietyConnection
+    fruitVariety(id: ID!): FruitVariety
+    presentationCategories: [PresentationCategory!]!
+    presentationCategory(id: ID!): PresentationCategory
+    presentations(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: FruitPresentationFilter
+    ): PresentationConnection
+    presentation(id: ID!): Presentation
+    products(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: ProductFilter
+    ): ProductConnection
+    product(input: ProductInput!): Product
+    productFiles(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: ProductFileFilter
+    ): ProductFileConnection
+    productFile(id: ID!): ProductFile
+}
+
+extend type Mutation {
+    createFruitCategory(input: CreateFruitCategory!): FruitCategory
+    createFruit(input: CreateFruit!): Fruit
+    createFruitVariety(input: CreateFruitVariety!): FruitVariety
+    createPresentationCategory(input: CreatePresentationCategory!): PresentationCategory
+    createPresentation(input: CreatePresentation!): Presentation
+    createProduct(input: CreateProduct!): Product
+    createProductFile(input: CreateProductFile!): ProductFile
+    syncFruitCategory: SyncResult
+    syncPresentationCategory: SyncResult
+    syncFruit: SyncResult
+    syncFruitVariety: SyncResult
+    syncPresentation: SyncResult
+    syncProduct: SyncResult
+}

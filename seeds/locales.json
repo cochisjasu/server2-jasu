@@ -1,0 +1,14 @@
+[
+    {
+        "id": "es",
+        "nameEs": "Español",
+        "nameEn": "Spanish",
+        "nativeName": "Español"
+    },
+    {
+        "id": "en",
+        "nameEs": "Inglés",
+        "nameEn": "English",
+        "nativeName": "English"
+    }
+]

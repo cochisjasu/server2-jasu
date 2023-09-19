@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: jasu-server
+  name: jasu-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jasu-server
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jasu-server
+    spec:
+      containers:
+      - image: registry.digitalocean.com/bluepixel/jasu-server:v1.1.0
+        name: jasu-server
+        imagePullPolicy: Always
+        resources: {}
+status: {}

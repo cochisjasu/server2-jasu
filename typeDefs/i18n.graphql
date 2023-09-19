@@ -1,0 +1,90 @@
+type Locale {
+    id: ID!
+    nativeName: String!
+}
+
+type Country {
+    id: ID!
+    name: String!
+    dialCode: Int!
+    payPalAccepted: Boolean
+    defaultLocale: Locale
+}
+
+input CountryFilter {
+    query: String
+	lsId: [ID]
+    id: [ID]
+}
+
+input CreateCountry {
+    id: ID
+    nameEs: String
+    nameEn: String
+    dialCode: Int
+    payPalAccepted: Boolean
+    cardsAccepted: Boolean
+    lsId: Int
+}
+
+type CountryEdge {
+    node: Country!
+}
+
+type CountryConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [CountryEdge]!
+}
+
+type Region {
+    id: ID!
+    name: String!
+    country: Country!
+}
+
+input RegionFilter {
+    query: String
+    country: [ID]
+    id: [ID]
+}
+
+type RegionEdge {
+    node: Region!
+}
+
+type RegionConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [RegionEdge]!
+}
+
+extend type Query {
+    countries(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: CountryFilter
+    ): CountryConnection
+    country(
+        id: ID!
+    ): Country
+    regions(
+        pag: Int = 0
+        num: Int = 20
+        ord: String = "name"
+        asc: Boolean = true
+        filter: RegionFilter
+    ): RegionConnection
+    region: Region
+    locales: [Locale]!
+}
+
+extend type Mutation {
+    updateCountry (input: CreateCountry!): Country!
+}

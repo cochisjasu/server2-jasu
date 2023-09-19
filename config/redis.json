@@ -1,0 +1,36 @@
+{
+  "development": {
+    "user": "",
+    "password": "",
+    "host": "127.0.0.1",
+    "port": 6379,
+    "db": 13,
+    "url": "redis://127.0.0.1:6379/13",
+    "maxRetriesPerRequest": 1,
+    "queue": "incomingBreadcrumbs",
+    "keyPrefix": "jasu:"
+  },
+  "test": {
+    "user": "default",
+    "password": "o4onpxtsd9gtp5wi ",
+    "host": "kv-test-do-user-3587967-0.a.db.ondigitalocean.com",
+    "port": 25061,
+    "db": 13,
+    "url": "rediss://default:o4onpxtsd9gtp5wi@kv-test-do-user-3587967-0.a.db.ondigitalocean.com:25061/13",
+    "maxRetriesPerRequest": 1,
+    "queue": "incomingBreadcrumbs",
+    "keyPrefix": "jasu:",
+    "tls": {}
+  },
+  "production": {
+    "user": "default",
+    "password": "AVNS_S17NQOV8GvAT6qzqLLn",
+    "host": "private-dbaas-db-5975720-do-user-13574098-0.b.db.ondigitalocean.com",
+    "port": 25061,
+    "db": 2,
+    "maxRetriesPerRequest": 1,
+    "queue": "incomingBreadcrumbs",
+    "keyPrefix": "jasu:",
+    "tls": {}
+  }
+}

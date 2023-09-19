@@ -1,0 +1,16 @@
+JASU Platform
+Sign up Successful
+
+Hi *|FULLNAME|*. Your signup process has been completed successfully
+
+Since this moment you have access to our services available through tha portal *|BASELINK|* to manage your orders
+
+Instagram: https://instagram.com/jasu_us_?igshid=YmMyMTA2M2Y=
+LinkedIn: https://www.linkedin.com/company/jasujuice/
+Facebook: https://www.facebook.com/jasu.usa/
+
+info@jasu.us
+*|BASELINK|*
+(+1) 305 699 4113
+
+Jasu © 2023 - All rights reserved

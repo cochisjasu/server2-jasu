@@ -1,0 +1,39 @@
+{
+  "plugins": [],
+  "source": {
+    "include": ["helpers", "bin", "lib", "models"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules|docs)"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs",
+    "template": "node_modules/clean-jsdoc-theme",
+    "readme": "./README.md",
+    "tutorials": "./tutorials",
+    "theme_opts": {
+      "theme": "dark",
+      "sections": [
+        "Tutorials",
+        "Menu",
+        "Global",
+        "Classes",
+        "Modules",
+        "Externals",
+        "Events",
+        "Namespaces"
+      ],
+      "meta": [
+        {
+          "name": "author",
+          "content": "Bluepixel"
+        }
+      ],
+      "footer": "Blackpixel"
+    }
+  }
+}

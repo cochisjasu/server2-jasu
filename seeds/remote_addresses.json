@@ -1,0 +1,189 @@
+[
+  {
+    "id": "127.0.0.1",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "::1",
+    "type": "ipv6",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "165.227.5.148",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "10.138.212.237",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "2604:a880:2:d0::11fd:8001",
+    "type": "ipv6",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.24.86",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "134.209.143.178",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "10.138.92.199",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "10.46.0.2",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": true
+  },
+  {
+    "id": "2604:a880:2:d0::11fc:b001",
+    "type": "ipv6",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.44.75",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "134.209.143.180",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "10.138.152.100",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "2604:a880:2:d0::1158:1",
+    "type": "ipv6",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "167.172.8.48",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "189.236.84.32",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.234.110",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.239.57",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.237.189",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.47.100",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.226.89",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.197.198.164",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.240.79",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.197.217.57",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.197.214.114",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "165.227.48.115",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "157.245.224.117",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "206.189.208.159",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "142.93.80.116",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "104.248.176.126",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  },
+  {
+    "id": "138.68.23.76",
+    "type": "ipv4",
+    "whiteList": true,
+    "greyList": false
+  }
+
+]

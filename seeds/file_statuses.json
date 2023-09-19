@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Inicializando"
+  },
+  {
+    "id": 2,
+    "name": "Inactivo"
+  },
+  {
+    "id": 3,
+    "name": "Procesando"
+  },
+  {
+    "id": 4,
+    "name": "Listo"
+  },
+  {
+    "id": 5,
+    "name": "Error De Proceso"
+  },
+  {
+    "id": 6,
+    "name": "Cargando"
+  },
+  {
+    "id": 7,
+    "name": "Error De Carga"
+  },
+  {
+    "id": 8,
+    "name": "Esperando En La Fila"
+  },
+  {
+    "id": 9,
+    "name": "Error al eliminar"
+  }
+]

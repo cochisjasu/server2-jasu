@@ -1,0 +1,88 @@
+{
+  "development": {
+    "recaptcha": {
+      "siteKey": "6LdBtwofAAAAAKPSv96tYwgEV_EnRjzmKnbqCMYU",
+      "secretKey": "6LdBtwofAAAAALVL9Rh6LPw19Z2ZCyQNkAB9CgfT"
+    },
+    "apiKey": "AIzaSyA0RTBwLAG_KmCc1Juja15nIsiR3xz_HEw",
+    "roads": {
+      "endpoint": "https://roads.googleapis.com/v1/snapToRoads"
+    },
+    "directions": {
+      "endpoint": "/maps/api/directions/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placeDetails": {
+      "endpoint": "/maps/api/place/details/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placePhoto": {
+      "endpoint": "/maps/api/place/photo",
+      "hostname": "maps.googleapis.com"
+    },
+    "searchPlaces": {
+      "endpoint": "/maps/api/place/findplacefromtext/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "staticMap": {
+      "endpoint": "/maps/api/staticmap",
+      "hostname": "maps.googleapis.com"
+    },
+    "distanceMatrix": {
+      "endpoint": "/maps/api/distancematrix/json",
+      "hostname": "maps.googleapis.com"
+    }
+  },
+  "test": {
+    "recaptcha": {
+      "siteKey": "6LdBtwofAAAAAKPSv96tYwgEV_EnRjzmKnbqCMYU",
+      "secretKey": "6LdBtwofAAAAALVL9Rh6LPw19Z2ZCyQNkAB9CgfT"
+    },
+    "apiKey": "AIzaSyA0RTBwLAG_KmCc1Juja15nIsiR3xz_HEw",
+    "roads": {
+      "endpoint": "https://roads.googleapis.com/v1/snapToRoads"
+    },
+    "directions": {
+      "endpoint": "/maps/api/directions/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placeDetails": {
+      "endpoint": "/maps/api/place/details/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placePhoto": {
+      "endpoint": "/maps/api/place/photo",
+      "hostname": "maps.googleapis.com"
+    },
+    "searchPlaces": {
+      "endpoint": "/maps/api/place/findplacefromtext/json",
+      "hostname": "maps.googleapis.com"
+    }
+  },
+  "production": {
+    "recaptcha": {
+      "siteKey": "6LdQaMQkAAAAAJzecPrw21m9ZVTAdEd5Jag4oXMg",
+      "secretKey": "6LdQaMQkAAAAAFsjrQXJJUzpbv7Og4URGA_0TmGW"
+    },
+    "apiKey": "AIzaSyA0RTBwLAG_KmCc1Juja15nIsiR3xz_HEw",
+    "roads": {
+      "endpoint": "https://roads.googleapis.com/v1/snapToRoads"
+    },
+    "directions": {
+      "endpoint": "/maps/api/directions/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placeDetails": {
+      "endpoint": "/maps/api/place/details/json",
+      "hostname": "maps.googleapis.com"
+    },
+    "placePhoto": {
+      "endpoint": "/maps/api/place/photo",
+      "hostname": "maps.googleapis.com"
+    },
+    "searchPlaces": {
+      "endpoint": "/maps/api/place/findplacefromtext/json",
+      "hostname": "maps.googleapis.com"
+    }
+  }
+}

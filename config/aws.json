@@ -1,0 +1,26 @@
+{
+  "development": {
+    "accessKeyId": "2UJASZXNBMXFSWKUVO5N",
+    "secretAccessKey": "ujj4agNF7udH4Hdq3dOktfGGI0mu4vES3Ie5jmXibtM",
+    "region": "sfo2",
+    "endpoint": "https://sfo2.digitaloceanspaces.com",
+    "Bucket": "blackpixel",
+    "signatureVersion": "v2"
+  },
+  "test": {
+    "accessKeyId": "2UJASZXNBMXFSWKUVO5N",
+    "secretAccessKey": "ujj4agNF7udH4Hdq3dOktfGGI0mu4vES3Ie5jmXibtM",
+    "region": "sfo2",
+    "endpoint": "https://sfo2.digitaloceanspaces.com",
+    "Bucket": "blackpixel",
+    "signatureVersion": "v2"
+  },
+  "production": {
+    "accessKeyId": "2UJASZXNBMXFSWKUVO5N",
+    "secretAccessKey": "ujj4agNF7udH4Hdq3dOktfGGI0mu4vES3Ie5jmXibtM",
+    "region": "sfo2",
+    "endpoint": "https://sfo2.digitaloceanspaces.com",
+    "Bucket": "blackpixel",
+    "signatureVersion": "v2"
+  }
+}

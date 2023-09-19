@@ -1,0 +1,246 @@
+type FileStatus {
+    id: ID!
+    name: String!
+    name_en: String!
+    name_es: String!
+    name_pt: String!
+    name_de: String!
+    name_fr: String!
+    name_it: String!
+    name_nl: String!
+}
+
+type FileStatusEdge {
+    node: FileStatus!
+}
+
+type FileStatusConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [FileStatusEdge]!
+}
+
+type FileClass {
+    id: ID!
+    name: String!
+    name_en: String!
+    name_es: String!
+    name_pt: String!
+    name_de: String!
+    name_fr: String!
+    name_it: String!
+    name_nl: String!
+}
+
+type FileClassEdge {
+    node: FileClass!
+}
+
+type FileClassConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [FileClassEdge]!
+}
+
+type FileType {
+    id: ID!
+    name: String!
+    name_en: String!
+    name_es: String!
+    name_pt: String!
+    name_de: String!
+    name_fr: String!
+    name_it: String!
+    name_nl: String!
+    mime: String!
+    extension: String!
+    class: FileClass!
+}
+
+input FileTypeFilter {
+    class: [ID]
+}
+
+type FileTypeEdge {
+    node: FileType!
+}
+
+type FileTypeConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [FileTypeEdge]!
+}
+
+type UploadPolicy {
+    url: String!
+    fields: String!
+}
+
+type FileUpload {
+    file: File!
+    policy: UploadPolicy!
+}
+
+type File {
+    id: ID!
+    status: FileStatus!
+    type: FileType!
+    name: String
+    url: String!
+    size: Int!
+    checksum: String
+    width: Int
+    height: Int
+    duration: Int
+    hlsUrl: String
+    dashUrl: String
+    mp3Url: String
+    pdfUrl: String
+    progress: Float
+    createdAt: String!
+    updatedAt: String!
+    preview: FilePreview
+}
+
+input FileFilter {
+    path: String
+    query: String
+    id: [ID!],
+    status: [ID]
+    class: [ID]
+    type: [ID]
+}
+
+type FileEdge {
+    node: File!
+}
+
+type FileConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [FileEdge]!
+}
+
+type FileProcessError {
+    file: File!
+    message: String!
+}
+
+type FilePreview {
+    id: ID!
+    jpegUrl: String!
+    webpUrl: String!
+    jpegSize: Int!
+    webpSize: Int!
+    jpegChecksum: String
+    webpChecksum: String
+    width: Int!
+    height: Int!
+    file: File!
+    index: Int!
+}
+
+type FilePreviewEdge {
+    node: FilePreview!
+}
+
+type FilePreviewConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [FilePreviewEdge]!
+}
+
+extend type Query {
+    fileStatus(
+        id: ID!
+    ): FileStatus
+    fileStatuses: FileStatusConnection
+    fileClass(
+        id: ID!
+    ): FileClass
+    fileClasses: FileClassConnection
+    fileType(
+        id: ID
+        mime: String
+        extension: String
+    ): FileType
+    fileTypes(
+        pag: Int = 0
+        num: Int = 20
+        ord: String = "id"
+        asc: Boolean = true
+        filter: FileTypeFilter
+    ): FileTypeConnection
+    file(
+        id: ID!
+    ): File
+    files(
+        pag: Int = 0
+        num: Int = 20
+        ord: String = "updatedAt"
+        asc: Boolean = false
+        filter: FileFilter
+    ): FileConnection
+    filePreview(
+        id: ID
+        file: ID
+        height: Int
+    ): FilePreview
+    filePreviews(
+        pag: Int = 0
+        num: Int = 20
+        ord: String = "index"
+        asc: Boolean = true
+        file: ID!
+        height: Int
+    ): FilePreviewConnection
+}
+
+extend type Mutation {
+    signUpload(
+        name: String!
+        path: String
+    ): FileUpload
+    verifyUpload(
+        id: ID!
+    ): File
+    deleteFile(
+        id: ID!
+    ): Boolean!
+}
+
+extend type Subscription {
+    createdFile(
+        id: ID
+        path: String
+    ): File
+    updatedFile(
+        id: ID
+    ): File
+    deletedFile(
+        id: ID
+        path: String
+    ): File
+    createdFilePreview: FilePreview
+    updatedFilePreview(
+        id: ID!
+    ): FilePreview
+    deletedFilePreview(
+        id: ID!
+    ): FilePreview
+    fileAddedPreview(
+        file: ID!
+        index: Int
+        height: Int
+    ): FilePreview
+}

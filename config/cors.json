@@ -1,0 +1,14 @@
+{
+  "origin": [
+    "https://jasu.bluepixel.mx",
+    "https://gql.jasu.bluepixel.mx",
+    "https://jasu.us",
+    "https://gql.jasu.us",
+    "https://cdn.blackpixel.mx",
+    "https://sandbox.blackpixel.mx",
+    "https://gql.sandbox.blackpixel.mx",
+    "https://preview.sandbox.blackpixel.mx"
+  ],
+  "methods": "GET,HEAD,POST",
+  "credentials": true
+}

@@ -1,0 +1,42 @@
+{
+  "development": {
+    "defaultNum": 20,
+    "rootDomain": "https://sandbox.blackpixel.mx",
+    "dashboardDomain": "sandbox.blackpixel.mx",
+    "onboardingDomain": "sandbox.blackpixel.mx",
+    "cdnRoot": "https://blackpixel.sfo2.digitaloceanspaces.com",
+    "themes": ["light", "dark"],
+    "timezone": "UTC",
+    "defaultTheme": "light",
+    "defaultCurrency": "USD",
+    "defaultLocale": "en",
+    "allowMultipleSessions": false,
+    "currencyThreshold": 0.02
+  },
+  "test": {
+    "defaultNum": 20,
+    "rootDomain": "https://jasu.bluepixel.mx",
+    "dashboardDomain": "jasu.bluepixel.mx",
+    "onboardingDomain": "jasu.bluepixel.mx",
+    "cdnRoot": "https://blackpixel.sfo2.digitaloceanspaces.com",
+    "themes": ["light", "dark"],
+    "timezone": "UTC",
+    "defaultTheme": "light",
+    "defaultCurrency": "USD",
+    "defaultLocale": "en",
+    "allowMultipleSessions": false,
+    "currencyThreshold": 0.02
+  },
+  "production": {
+    "defaultNum": 20,
+    "rootDomain": "https://jasu.us",
+    "cdnRoot": "https://cdn.blackpixel.mx",
+    "themes": ["light", "dark"],
+    "timezone": "UTC",
+    "defaultTheme": "light",
+    "defaultCurrency": "USD",
+    "defaultLocale": "en",
+    "allowMultipleSessions": false,
+    "currencyThreshold": 0.02
+  }
+}

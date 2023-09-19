@@ -1,0 +1,20 @@
+Plataforma JASU
+Nuevo mensaje de contacto
+
+Un usuario ha enviado un mensaje por el formulario de contacto general
+
+Nombre: *|NAME|*
+Correo electrónico: *|EMAIL|*
+Teléfono: *|PHONE|*
+Empresa: *|COMPANYNAME|*
+Mensaje: *|MESSAGE|*
+
+Instagram: https://instagram.com/jasu_us_?igshid=YmMyMTA2M2Y=
+LinkedIn: https://www.linkedin.com/company/jasujuice/
+Facebook: https://www.facebook.com/jasu.usa/
+
+info@jasu.us
+*|BASELINK|*
+(+1) 305 699 4113
+
+Jasu © 2023 - Todos los derechos reservados

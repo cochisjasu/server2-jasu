@@ -1,0 +1,21 @@
+Plataforma JASU
+Solicitud de Suscripción
+
+Un nuevo usuario ha solicitado acceso a la aplicación
+
+Nombre: *|FULLNAME|*
+
+Empresa: *|COMPANYNAME|*
+Correo electrónico: *|EMAIL|*
+
+Confirmar usuario - *|LINK|*
+
+Instagram: https://instagram.com/jasu_us_?igshid=YmMyMTA2M2Y=
+LinkedIn: https://www.linkedin.com/company/jasujuice/
+Facebook: https://www.facebook.com/jasu.usa/
+
+info@jasu.us
+*|BASELINK|*
+(+1) 305 699 4113
+
+Jasu © 2023 - Todos los derechos reservados

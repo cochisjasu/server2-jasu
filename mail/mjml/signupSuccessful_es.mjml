@@ -1,0 +1,61 @@
+<mjml>
+    <mj-head>
+    <mj-title>Jasu - Registro Exitoso</mj-title>
+    <mj-preview>Tu cuenta ha sido registrada exitosamente</mj-preview>
+    <mj-attributes>
+        <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+        <mj-all font-family="Montserrat, Arial, sans-serif"></mj-all>
+        <mj-text font-weight="500" font-size="16px" line-height="24px" color="#404040"></mj-text>
+    </mj-attributes>
+    <mj-style>
+        a {
+            color: inherit;
+        }
+        a:hover{
+            color: inherit;
+        }
+    </mj-style>
+    </mj-head>
+    <mj-body>
+        <mj-section
+            border-radius="11px 11px 0 0"
+            padding="0"
+        >
+            <mj-column padding="0">
+                <mj-image padding="0" src="https://cdn.jasu.us/header.png" alt="Jasu Header" />
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="#FFF">
+            <mj-column padding="0">
+                <mj-image padding="0 26px 18px 26px" src="https://cdn.jasu.us/banner.png" alt="Jasu Banner" />
+                <mj-text padding="0 26px" letter-spacing="0.1px">
+                    Plataforma JASU
+                </mj-text>
+                <mj-text padding="0 26px 12px 26px" color="#245130" font-size="24px" line-height="28px" font-weight="600">
+                    Registro Exitoso
+                </mj-text>
+                <mj-text letter-spacing=".1px">
+                    Hola *|FULLNAME|*. De parte de Jasu es un gusto informale que su proceso de registro se ha completado de forma exitosa.
+                </mj-text>
+                <mj-text letter-spacing=".1px">
+                    A partir de este momento podrá disponer de nuestros servicios ofrecidos a través del portal *|BASELINK|* para gestionar sus pedidos.
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="#EFEFEC" border-radius="0 0 11px 11px">
+            <mj-column>
+                <mj-social icon-size="25px" mode="horizontal" align="center">
+                    <mj-social-element src="https://cdn.jasu.us/instagram.png" name="instagram" href="https://instagram.com/jasu_us_?igshid=YmMyMTA2M2Y=" background-color="#EFEFEC"/>
+                    <mj-social-element src="https://cdn.jasu.us/linkedin.png" name="linkedin" href="https://www.linkedin.com/company/jasujuice/" background-color="#EFEFEC"/>
+                    <mj-social-element src="https://cdn.jasu.us/facebook.png" name="facebook" href="https://www.facebook.com/jasu.usa/" background-color="#EFEFEC"/>
+                </mj-social>
+                <mj-text align="center" color="#3F384C" font-size="14px" line-height="17px">
+                    info@jasu.us | *|BASELINK|* | (+1) 305 699 4113
+                </mj-text>
+                <mj-text align="center" color="#3F384C" font-size="14px" line-height="17px">
+                    Jasu © 2023 - Todos los derechos reservados
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

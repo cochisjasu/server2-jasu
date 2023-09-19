@@ -1,0 +1,52 @@
+type User {
+    id: ID!
+    connected: Boolean!
+    connectedAt: Date
+    disconnectedAt: Date
+    firstName: String!
+    lastName: String!
+    fullName: String!
+    email: String!
+    companyName: String!
+    companyWebsite: String!
+    validated: Boolean!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input UserFilter {
+    query: String
+    id: [ID]
+}
+
+type UserEdge {
+    node: User!
+}
+
+type UserConnection {
+    totalCount: Int!
+    totalEdges: Int!
+    hasMore: Boolean!
+    pag: Int!
+    edges: [UserEdge!]!
+}
+
+type ValidateResponse {
+    status: Int!
+    user: User
+}
+
+extend type Query {
+    user(id: ID, email: String): User
+    users (
+        pag: Int = 0
+        num: Int = 20
+        ord: String = "updatedAt"
+        asc: Boolean = false
+        filter: UserFilter
+    ): UserConnection!
+}
+
+extend type Mutation {
+    validateUser (id: ID!, email: String!, locale: ID!): ValidateResponse!
+}

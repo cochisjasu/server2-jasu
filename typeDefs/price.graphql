@@ -1,0 +1,118 @@
+type Price {
+    id: ID!
+    date: String!
+    price: Float
+    product: Product!
+    country: Country
+    drums: Int
+    volume: Float
+    organic: Boolean!
+}
+
+type PriceEdge {
+    node: Price!
+}
+
+type PriceConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [PriceEdge]!
+}
+
+input CreatePrice {
+    id: ID
+    date: String!
+    price: Float!
+    country: ID
+    drums: Int
+    volume: Float
+    product: ID
+    organic: Boolean!
+    fruit: ID
+    presentation: ID
+}
+
+input PriceFilter {
+    query: String
+    product: [ID]
+    country: [ID]
+    year: Int
+}
+
+input PriceInput {
+    id: ID
+    product: ID
+    country: ID
+    date: String
+}
+
+type Harvest {
+    id: ID!
+    month: Int!
+    organic: Boolean!
+    fruitVariety: FruitVariety!
+    country: Country!
+}
+
+type HarvestEdge {
+    node: Harvest!
+}
+
+type HarvestConnection {
+    totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+    edges: [HarvestEdge]!
+}
+
+input CreateHarvest {
+    id: ID
+    month: Int!
+    organic: Boolean!
+    fruitVariety: ID!
+    country: ID!
+}
+
+input HarvestFilter {
+    fruitVariety: [ID]
+    fruit: [ID]
+    country: [ID]
+    month: [Int]
+}
+
+input HarvestInput {
+    id: ID
+    fruitVariety: ID
+    country: ID
+    month: Int
+}
+
+extend type Query {
+    prices(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: PriceFilter
+    ): PriceConnection
+    price(input: PriceInput!): Price
+    harvests(
+        pag: Int = 0
+        num: Int = 20
+        ord: String
+        asc: Boolean = true
+        filter: HarvestFilter
+    ): HarvestConnection
+    harvest(input: HarvestInput!): Harvest
+}
+
+extend type Mutation {
+    createPrice(input: CreatePrice!): Product
+    syncPricesData: Int
+    createHarvest(input: CreateHarvest!): Harvest
+    syncHarvestsData: Int
+    syncAll: Boolean
+}

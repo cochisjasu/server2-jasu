@@ -1,0 +1,17 @@
+input NewComment {
+    name: String!
+    email: String!
+    phone: String!
+    companyName: String!
+    message: String!
+}
+
+input NewUserComment {
+    topic: String!
+    message: String!
+}
+
+extend type Mutation {
+    sendComment(input: NewComment!): Boolean!
+    sendUserComment(input: NewUserComment!): Boolean!
+}

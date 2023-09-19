@@ -1,0 +1,47 @@
+type Timezone {
+	id: ID!
+	name: String!
+	gmtOffset: Float
+}
+
+input TimezoneFilter {
+	query: String
+	id: [ID]
+}
+
+type TimezoneEdge {
+	node: Timezone!
+}
+
+type TimezoneConnection {
+	totalCount: Int!
+    totalEdges: Int!
+	hasMore: Boolean!
+	pag: Int!
+	edges: [TimezoneEdge]!
+}
+
+extend type Query {
+	timezones(
+		pag: Int = 0
+		num: Int = 20
+		ord: String = "id"
+		asc: Boolean = true
+		filter: TimezoneFilter
+	): TimezoneConnection
+	timezone(
+		id: ID
+		name: String
+	): Timezone
+}
+
+extend type Mutation {
+	setTimezone(
+		id: ID,
+		name: String
+	): Boolean!
+}
+
+extend type Subscription {
+	changedTimezone: Timezone!
+}

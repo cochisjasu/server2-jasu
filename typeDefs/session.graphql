@@ -1,0 +1,116 @@
+type ClientOS {
+    id: ID!
+    name: String!
+}
+
+type ClientBrowser {
+    id: ID!
+    name: String!
+}
+
+type ClientPlatform {
+    id: ID!
+    name: String!
+}
+
+type AgentSession {
+    id: ID!
+    isBot: Boolean!
+    isMobile: Boolean!
+    isTablet: Boolean!
+    isDesktop: Boolean!
+    isSmartTv: Boolean!
+    clientOs: ClientOS!
+    clientBrowser: ClientBrowser!
+    clientBrowserVersion: String
+    clientPlatform: ClientPlatform!
+    remoteSession: RemoteSession!
+    session: Session
+    timezone: Timezone!
+    createdAt: Date!
+    locale: Locale!
+}
+
+type RemoteAddress {
+    id: ID!
+    type: String!
+    lat: Float
+    lon: Float
+    region: Region
+    country: Country
+    timezone: Timezone
+    city: String
+    zipCode: String
+}
+
+type RemoteSession {
+    id: ID!
+    remoteAddress: RemoteAddress!
+    isDst: Boolean
+    agentId: ID!
+    createdAt: Date!
+}
+
+type Nonce {
+    id: ID!
+    data: String!
+}
+
+type Session {
+    id: ID!
+    user: User!
+    agentId: ID
+    createdAt: Date!
+    loggedOutAt: String
+}
+
+input SignUp {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    companyName: String!
+    companyWebsite: String!
+    gre: String!
+}
+
+type SignUpResponse {
+    status: Int!
+    user: User
+}
+
+type LogoutResponse {
+    forced: Boolean!
+    logout: Boolean!
+}
+
+type RecoveryResponse {
+    status: Int!
+    session: Session
+}
+
+extend type Query {
+    agent: AgentSession!
+    time: String!
+}
+
+extend type Mutation {
+    login(
+        email: String!
+        password: String!
+        nonce: ID!
+    ): Session
+    logout: Boolean
+    nonce: Nonce!
+    signUp(input: SignUp!): SignUpResponse!
+    generateRecovery (email: String!, gre: String!): Boolean!
+    redeemRecovery (recovery: String!, password: String!): RecoveryResponse!
+    setLocale(locale: ID!): Locale!
+}
+extend type Subscription {
+    loggedIn: Session!
+    loggedOut: LogoutResponse!
+    changedRemoteSession: RemoteSession!
+    changedTimezone: Timezone!
+    changedLocale: Locale!
+}

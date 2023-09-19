@@ -1,0 +1,34 @@
+[
+  {
+    "name": "locales",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "countries",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "regions",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "timezones",
+    "verifyProperty": "name"
+  },
+  {
+    "name": "file_statuses",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "file_classes",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "file_types",
+    "verifyProperty": "id"
+  },
+  {
+    "name": "remote_addresses",
+    "verifyProperty": "id"
+  }
+]

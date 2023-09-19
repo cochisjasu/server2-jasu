@@ -1,0 +1,67 @@
+{
+  "development": {
+    "logging": false,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "connectTimeout": 60000
+    },
+    "host": "127.0.0.1",
+    "port": 3306,
+    "username": "sandbox",
+    "password": "sandbox",
+    "database": "jasu_dev",
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    },
+    "define": {
+      "underscored": true,
+      "timestamps": false
+    }
+  },
+  "test": {
+    "logging": false,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "connectTimeout": 60000
+    },
+    "host": "db-test-do-user-3587967-0.a.db.ondigitalocean.com",
+    "username": "doadmin",
+    "password": "oh39ea1wadmaudo0",
+    "port": 25060,
+    "database": "jasu_test",
+    "sslmode": "REQUIRED",
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    },
+    "define": {
+      "underscored": true,
+      "timestamps": false
+    }
+  },
+  "production": {
+    "logging": false,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "connectTimeout": 60000
+    },
+    "charset": "utf8mb4",
+    "host": "private-dbaas-db-10546733-do-user-13574098-0.b.db.ondigitalocean.com",
+    "port": 25060,
+    "username": "doadmin",
+    "password": "AVNS_rjCyulKB4_SdoVuR6_g",
+    "database": "jasu",
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    },
+    "define": {
+      "underscored": true,
+      "timestamps": false
+    }
+  }
+}

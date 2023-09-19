@@ -1,0 +1,17 @@
+{
+  "documentacion": {
+    "title": "Proceso de documentacion"
+  },
+  "deployment": {
+    "title": "Proceso de despliegue con docker"
+  },
+  "testing": {
+    "title": "Procedimiento de TDD"
+  },
+  "funcionamiento": {
+    "title": "Manual general del funcionamiento del boilerplate"
+  },
+  "entornos": {
+    "title": "Los entornos de trabajo"
+  }
+}

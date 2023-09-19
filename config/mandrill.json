@@ -1,0 +1,32 @@
+{
+  "development": {
+    "fromEmail": "noreply@bluepixel.mx",
+    "fromName": "Jasu",
+    "replyTo": "jose.tapia@bluepixel.mx",
+    "website": "bluepixel.mx",
+    "webhookId": "vawKnhpH76wVGo2PUCQ5PEGtdQ-ecq-ZhgCztzzScHI",
+    "webhookKey": "0jLDbbs9FPxIkoBuueUkLg",
+    "key": "Iqd4ZFnOBL06uzW4E-n6fA",
+    "adminEmail": "jose.tapia@bluepixel.mx"
+  },
+  "test": {
+    "fromEmail": "noreply@bluepixel.mx",
+    "fromName": "Jasu",
+    "replyTo": "mailbot@bluepixel.mx",
+    "website": "bluepixel.mx",
+    "webhookId": "vawKnhpH76wVGo2PUCQ5PEGtdQ-ecq-ZhgCztzzScHI",
+    "webhookKey": "0jLDbbs9FPxIkoBuueUkLg",
+    "key": "CH1We7eLhIwZ61USWJFcbQ",
+    "adminEmail": "info@jasu.us"
+  },
+  "production": {
+    "fromEmail": "info@jasu.us",
+    "fromName": "Jasu",
+    "replyTo": "info@jasu.us",
+    "website": "jasu.us",
+    "webhookId": "vawKnhpH76wVGo2PUCQ5PEGtdQ-ecq-ZhgCztzzScHI",
+    "webhookKey": "0jLDbbs9FPxIkoBuueUkLg",
+    "key": "md-Qu5tle-zpPV7VfmeeJtEIg",
+    "adminEmail": "info@jasu.us"
+  }
+}

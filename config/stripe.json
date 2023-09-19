@@ -1,0 +1,15 @@
+{
+  "development": {
+    "webhookSecret": "whsec_AAesDykJ7JTs6Hmrz4IROxfpSJ0gnJTa",
+    "publicKey": "pk_test_51IHcTQCz2AJaduYaCSUL3LFVe9NsT2H4wJpQ6nq2sZq1x81CrCiN5DDLlmx6gWbXOUoAhDfROopLz9HsQh0P02NL00MArt6DZy",
+    "secretKey": "sk_test_51IHcTQCz2AJaduYaf17CSf5we4mrxqJLdbTPEdPKQV2WkpQ8OYG58wgd5aujFXM49C3jjtfvdVz17EHvMY8O6kpS00ks8wgXR7"
+  },
+  "test": {
+    "publicKey": "pk_test_51IHcTQCz2AJaduYaCSUL3LFVe9NsT2H4wJpQ6nq2sZq1x81CrCiN5DDLlmx6gWbXOUoAhDfROopLz9HsQh0P02NL00MArt6DZy",
+    "secretKey": "sk_test_51IHcTQCz2AJaduYaf17CSf5we4mrxqJLdbTPEdPKQV2WkpQ8OYG58wgd5aujFXM49C3jjtfvdVz17EHvMY8O6kpS00ks8wgXR7"
+  },
+  "production": {
+    "publicKey": "pk_test_51IHcTQCz2AJaduYaCSUL3LFVe9NsT2H4wJpQ6nq2sZq1x81CrCiN5DDLlmx6gWbXOUoAhDfROopLz9HsQh0P02NL00MArt6DZy",
+    "secretKey": "sk_test_51IHcTQCz2AJaduYaf17CSf5we4mrxqJLdbTPEdPKQV2WkpQ8OYG58wgd5aujFXM49C3jjtfvdVz17EHvMY8O6kpS00ks8wgXR7"
+  }
+}
